@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bazillionbeings/BBComponentKeywordScan/issues"
   },
-  "homepage": "https://github.com/bazillionbeings/BBComponentKeywordScan#readme"
+  "homepage": "https://github.com/bazillionbeings/BBComponentKeywordScan#readme",
+  "dependencies": {
+    "bb-component": "git+https://github.com/bazillionbeings/BBComponent.git"
+  }
 }

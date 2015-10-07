@@ -1,7 +1,7 @@
 'use strict';
 
 let bbComponent = require('bb-component'),
-    constValues = bbComponen    .constValues,
+    constValues = bbComponent.constValues,
     ComponentResult = bbComponent.ComponentResult,
     Component = bbComponent.Component;
 

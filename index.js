@@ -1,19 +1,23 @@
 'use strict';
 
-var bbComponent = require('bb-component');
-var constValues = bbComponent.constValues;
-var ComponentResult = bbComponent.ComponentResult;
-var Component = bbComponent.Component;
+let bbComponent = require('bb-component'),
+    constValues = bbComponen    .constValues,
+    ComponentResult = bbComponent.ComponentResult,
+    Component = bbComponent.Component;
 
-function KeywordScan(controllerCallBacks, dataStore) {
-  Component.call(this, controllerCallBacks, dataStore, [constValues.componentOutputTypes.facebookLatestStatus]);
-  this._controllerCallBacks = controllerCallBacks;
+class KeywordScan {
+    constructor(controllerCallBacks) {
+        super(controllerCallBacks, [constValues.componentOutputTypes.facebookLatestStatus]);
+    }
+
+    dataInput() {
+    }
+
+    execute() {
+        //TODO change with real scan
+        this._controllerCallBacks.result(new ComponentResult(constValues.componentOutputTypes.keywords,['cat']));
+        this._controllerCallBacks.finish();
+    }
 }
-KeywordScan.prototype = Object.create(Component.prototype);
-
-KeywordScan.prototype.execute = function() {
-  //TODO change with real scan
-  this._controllerCallBacks.finish(new ComponentResult(constValues.componentOutputTypes.keywords,['cat']));
-};
 
 module.exports = KeywordScan;

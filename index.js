@@ -5,7 +5,7 @@ let bbComponent = require('bb-component'),
     ComponentResult = bbComponent.ComponentResult,
     Component = bbComponent.Component;
 
-class KeywordScan {
+class KeywordScan extends Component {
     constructor(controllerCallBacks) {
         super(controllerCallBacks, [constValues.componentOutputTypes.facebookLatestStatus]);
     }
